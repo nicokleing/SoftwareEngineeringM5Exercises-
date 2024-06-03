@@ -1,0 +1,191 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "My Project API",
+      "description": "API documentation for my project",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "Calculator",
+        "description": "API for Calculations"
+      }
+    ],
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/calculator/add": {
+        "get": {
+          "tags": [
+            "Calculator"
+          ],
+          "summary": "Add two numbers",
+          "parameters": [
+            {
+              "name": "num1",
+              "in": "query",
+              "description": "First number",
+              "required": true,
+              "type": "number"
+            },
+            {
+              "name": "num2",
+              "in": "query",
+              "description": "Second number",
+              "required": true,
+              "type": "number"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "result": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/calculator/subtract": {
+        "get": {
+          "tags": [
+            "Calculator"
+          ],
+          "summary": "Subtract two numbers",
+          "parameters": [
+            {
+              "name": "num1",
+              "in": "query",
+              "description": "First number",
+              "required": true,
+              "type": "number"
+            },
+            {
+              "name": "num2",
+              "in": "query",
+              "description": "Second number",
+              "required": true,
+              "type": "number"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "result": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/calculator/multiply": {
+        "get": {
+          "tags": [
+            "Calculator"
+          ],
+          "summary": "Multiply two numbers",
+          "parameters": [
+            {
+              "name": "num1",
+              "in": "query",
+              "description": "First number",
+              "required": true,
+              "type": "number"
+            },
+            {
+              "name": "num2",
+              "in": "query",
+              "description": "Second number",
+              "required": true,
+              "type": "number"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "result": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/calculator/divide": {
+        "get": {
+          "tags": [
+            "Calculator"
+          ],
+          "summary": "Divide two numbers",
+          "parameters": [
+            {
+              "name": "num1",
+              "in": "query",
+              "description": "First number",
+              "required": true,
+              "type": "number"
+            },
+            {
+              "name": "num2",
+              "in": "query",
+              "description": "Second number",
+              "required": true,
+              "type": "number"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful response",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "result": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "error": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
